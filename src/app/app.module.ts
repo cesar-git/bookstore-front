@@ -20,6 +20,11 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import { CategoriaComponent } from './components/views/categoria/categoria.component';
+import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -30,7 +35,8 @@ import { CategoriaComponent } from './components/views/categoria/categoria.compo
     NavComponent,
     HomeComponent,
     CategoriaReadComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    CategoriaCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,11 @@ import { CategoriaComponent } from './components/views/categoria/categoria.compo
     MatCardModule,
     MatTableModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

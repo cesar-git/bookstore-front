@@ -4,7 +4,7 @@
         <h1>Categoria</h1>
     </div>
 
-    <button class="mat-elevation-z8" mat-stroked-button color="primary">NOVA CATEGORIA</button>
+    <button class="mat-elevation-z8" (click)="navegarParaCategoriaCreate()" mat-stroked-button color="primary">NOVA CATEGORIA</button>
 
     <div class="mat-elevation-z8 content-table">
         <table class="table" mat-table [dataSource]="categorias">
@@ -31,7 +31,8 @@
               <th mat-header-cell *matHeaderCellDef> LIVROS </th>
               <td mat-cell *matCellDef="let row"> 
                   <a class="livros" href="#">
-                    <i class="material-icons">book</i>
+                    <i><img src="assets/img/book-icon41.jpg" alt=""></i>
+                    
                   </a>   
               </td>
             </ng-container>
