@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs/internal/Observable';
 import { Livro } from '../livro.model';
 import { LivroService } from '../livro.service';
 
@@ -12,18 +11,18 @@ import { LivroService } from '../livro.service';
 })
 export class LivroUpdateComponent implements OnInit {
 
-  id_cat: String = '';
+  id_cat: String = '';  
+
+  livro: Livro = {
+    id: "",
+    titulo: "",
+    nome_autor: "",
+    texto: "",
+  };
 
   titulo     = new FormControl("", [Validators.minLength(3)]);
   nome_autor = new FormControl("", [Validators.minLength(3)]);
   texto      = new FormControl("", [Validators.minLength(10)]); 
-
-  livro: Livro = {
-    id: '',
-    titulo: '',
-    nome_autor: '',
-    texto: ''
-  }
 
   constructor(
     private service: LivroService,
